@@ -12,6 +12,10 @@ struct complex {
     }
 };
 
+int add(int* i, int* j) {
+    return *i + *j;
+}
+
 int main() {
     auto p = gnew<int>(25);
     auto q = p;
@@ -39,6 +43,8 @@ int main() {
     for(int i=0; i<5; i++) {
         cout << "value a[" << i << "]: " << *(a+i) << endl;
     }
+
+    cout << "add(p,q): " << add(p,q) << endl;
 
 }
 
